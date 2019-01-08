@@ -17,8 +17,8 @@
 	<properties>
 		<java.version>1.8</java.version>
 
-        <flyway.version>4.0.3</flyway.version>
-        <postgres.driver.version>9.2-1002.jdbc4</postgres.driver.version>
+        <flyway.version>5.2.4</flyway.version>
+        <postgres.driver.version>42.0.0</postgres.driver.version>
         <database.url>jdbc:postgresql://localhost:5432/flywaydemo</database.url>
         <database.user>flywaydemo</database.user>
         <databese.password>flywaydemo</databese.password>
@@ -76,6 +76,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        
+        <!-- add jdbc postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgres.driver.version}</version>
+        </dependency>
+
 	</dependencies>
 
 	<build>
@@ -98,7 +106,7 @@
                     <user>${database.user}</user>
                     <password>${databese.password}</password>
                 </configuration>
-                <dependencies>
+                 <dependencies>
                     <dependency>
                         <groupId>postgresql</groupId>
                         <artifactId>postgresql</artifactId>
@@ -107,7 +115,7 @@
                     <dependency>
                         <groupId>postgresql</groupId>
                         <artifactId>postgresql</artifactId>
-                        <version>9.6</version>
+                        <version>${postgres.driver.version}</version>
                     </dependency>
                 </dependencies>
 
