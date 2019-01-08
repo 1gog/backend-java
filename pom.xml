@@ -19,9 +19,10 @@
 
         <flyway.version>5.2.4</flyway.version>
         <postgres.driver.version>42.2.5</postgres.driver.version>
-        <database.url>jdbc:postgresql://localhost:5432/flywaydemo</database.url>
-        <database.user>flywaydemo</database.user>
-        <databese.password>flywaydemo</databese.password>
+
+        <database.url>${env.DB_CONNECT}</database.url>
+        <database.user>${env.DB_USER}</database.user>
+        <database.password>${env.DB_PASSWORD}</database.password>
 
 	</properties>
 
