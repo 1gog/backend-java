@@ -104,6 +104,11 @@
                         <artifactId>postgresql</artifactId>
                         <version>${postgres.driver.version}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>9.6</version>
+                    </dependency>
                 </dependencies>
 
 			</plugin>
