@@ -1,9 +1,8 @@
 CREATE TABLE car (
-    id INT NOT NULL PRIMARY KEY,
-    license_plate VARCHAR NOT NULL,
+    id serial NOT NULL PRIMARY KEY,
+    name VARCHAR NOT NULL,
     color VARCHAR NOT NULL
 );
 
-ALTER TABLE owner ADD driver_license_id VARCHAR;
 
-INSERT INTO brand (name) VALUES ('DeLorean');
+INSERT INTO car (name, color) VALUES ('DeLorean', 'Yello');
