@@ -100,7 +100,6 @@
                 <version>${flyway.version}</version>
                 <configuration>
                     <sqlMigrationPrefix>V</sqlMigrationPrefix>
-                    <undoSqlMigrationPrefix>U</undoSqlMigrationPrefix>
                     <sqlMigrationSeparator>__</sqlMigrationSeparator>
                     <locations>
                         <location>filesystem:src/main/resources/flyway/migrations</location>
