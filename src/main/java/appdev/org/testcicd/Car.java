@@ -7,8 +7,10 @@ import javax.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Car {
+    
+    //@GeneratedValue(strategy=GenerationType.AUTO)
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
     private String name;

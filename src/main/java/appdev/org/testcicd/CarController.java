@@ -20,8 +20,10 @@ public class CarController {
 	private CarRepository carRepository;
 
 	// save new car 
-	@GetMapping(path="/api/car/add")
-	public @ResponseBody String addNewCar(@RequestParam String name, @RequestParam String color ){
+	@GetMapping(path="add")
+	public @ResponseBody String addNewCar(
+			@RequestParam String name, 
+			@RequestParam String color ){
 
 		Car car = new Car();
 		car.setName(name);
@@ -31,7 +33,7 @@ public class CarController {
 	}
 
 	// get all car
-	@GetMapping(path="/api/car/all")
+	@GetMapping(path="all")
 	public @ResponseBody Iterable<Car> getAllUsers(){
 		return carRepository.findAll();
 	}
